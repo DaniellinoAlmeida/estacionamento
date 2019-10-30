@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="components/loader.js"></script>
+  <script src="components/js/jquery-3.4.1.min.js"></script>
+  <script src="components/js/materialize.min.js"></script>
+  <style>
+    body{
+      background-color: lightblue;
+    }
+  label{
+    font-size: 12pt
+  }
+  #cadastrar, #listar{
+    margin-left: 14%;
+  }
+  #listar{
+    padding: 0px 48px 0px 48px;
+  }
+  </style>
+
+  <script>
+    $(document).ready(function(){
+      $('select').formSelect();
+    })
+  </script>
+</head>
+<body>
+  <div class="container">
+      <div class="col s12 m6">
+      <div class="card-panel red z-depth-4">
+        <div class="card-content">
+          <h4 class="white-text">Estacionamento</h4>
+        </div>
+      </div>
+      </div>
+      <div class="card-panel z-depth-4">
+        <div class="row">
+          <div class="input-field col s12 m6">
+            <input type="text" id="prop" class="teal-text">
+            <label for="prop">Nome do proprietário</label>
+            </div>
+            <div class="input-field col s12 m6">
+            <input type="text" id="marca" class="teal-text">
+            <label for="marca">Marca do carro</label>
+            </div>
+            <div class="input-field col s12 m6">
+            <input type="text" id="modelo" class="teal-text">
+            <label for="modelo">Modelo do carro</label>
+            </div>
+            <div class="input-field col s12 m6">
+              <select id="tipoVeiculo">
+                <option value="" disabled selected>Tipo de veículo</option>
+                <option value="1">Carro</option>
+                <option value="2">Moto</option>
+              </select>
+            </div>
+
+      </div>
+      <div class="row">
+        <div class="col s12">
+            <a href="#" class="waves-effect waves-darken btn-large" id="cadastrar"><i class="material-icons left">add</i> Cadastrar</a>
+            <br>
+            <br>
+            <a href="#" class="waves-effect waves-darken btn-large"  id="listar"><i class="material-icons left">rate_review</i>Listar</a>
+        </div>
+      </div>
+
+  </div>
+  </div>
+</body>
+</html>
